@@ -3,26 +3,55 @@
    Design system – DARE UK Project
    ================================================ */
 
+/* ---------- Tokens (light mode defaults) ---------- */
 :root {
-  --cyan:   #00CFFF;
-  --pink:   #F07B8E;
-  --dark:   #333344;
-  --mid:    #555566;
-  --light:  #F5F7FA;
-  --white:  #FFFFFF;
-  --border: #E2E6EA;
-  --radius: 8px;
-  --shadow: 0 2px 16px rgba(0,0,0,.08);
-  --font:   'Inter', 'Segoe UI', Arial, sans-serif;
+  --cyan:        #00CFFF;
+  --pink:        #F07B8E;
+  --dark:        #333344;   /* nav / hero / footer – always dark */
+  --radius:      8px;
+  --font:        'Inter', 'Segoe UI', Arial, sans-serif;
+
+  /* Themeable */
+  --bg:          #FFFFFF;
+  --bg-alt:      #F5F7FA;
+  --text:        #333344;
+  --text-muted:  #555566;
+  --border:      #E2E6EA;
+  --card-bg:     #FFFFFF;
+  --shadow:      0 2px 16px rgba(0,0,0,.08);
+
+  /* Nav (light mode = white bar) */
+  --nav-bg:      #FFFFFF;
+  --nav-border:  #E2E6EA;
+  --nav-link:    rgba(0,0,0,.65);
+  --nav-active:  var(--dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:          #0F0F1A;
+    --bg-alt:      #1A1A2E;
+    --text:        #E8E8F5;
+    --text-muted:  #9090B0;
+    --border:      #2A2A42;
+    --card-bg:     #1A1A2E;
+    --shadow:      0 2px 16px rgba(0,0,0,.35);
+
+    /* Nav (dark mode = same dark as hero) */
+    --nav-bg:      #333344;
+    --nav-border:  transparent;
+    --nav-link:    rgba(255,255,255,.75);
+    --nav-active:  #FFFFFF;
+  }
 }
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: light dark; }
 body {
   font-family: var(--font);
-  color: var(--dark);
-  background: var(--white);
+  color: var(--text);
+  background: var(--bg);
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -33,7 +62,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Utility ---------- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 .section    { padding: 4rem 0; }
-.section--alt { background: var(--light); }
+.section--alt { background: var(--bg-alt); }
 .text-center { text-align: center; }
 .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
 
@@ -42,7 +71,7 @@ h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
 h1 { font-size: clamp(2rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1.2rem; }
 h3 { font-size: 1.25rem; margin-bottom: .6rem; }
-p  { margin-bottom: 1rem; color: var(--mid); }
+p  { margin-bottom: 1rem; color: var(--text-muted); }
 p:last-child { margin-bottom: 0; }
 
 .accent-cyan { color: var(--cyan); }
@@ -53,8 +82,10 @@ p:last-child { margin-bottom: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--dark);
-  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: var(--shadow);
+  transition: background .2s;
 }
 .nav-inner {
   display: flex;
@@ -71,7 +102,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   gap: .5rem;
-  color: var(--white);
+  color: var(--nav-active);
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: .02em;
@@ -84,7 +115,7 @@ p:last-child { margin-bottom: 0; }
   gap: .25rem;
 }
 .nav-links a {
-  color: rgba(255,255,255,.8);
+  color: var(--nav-link);
   padding: .5rem .9rem;
   border-radius: var(--radius);
   font-size: .95rem;
@@ -109,7 +140,7 @@ p:last-child { margin-bottom: 0; }
 }
 .nav-toggle span {
   display: block; width: 24px; height: 2px;
-  background: var(--white); border-radius: 2px;
+  background: var(--nav-link); border-radius: 2px;
   transition: transform .25s;
 }
 
@@ -182,7 +213,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- Lay Summary ---------- */
 .lay-summary {
-  background: var(--white);
+  background: var(--bg);
   padding: 3rem 0;
 }
 .summary-grid {
@@ -192,13 +223,13 @@ p:last-child { margin-bottom: 0; }
   margin-top: 2rem;
 }
 .summary-card {
-  background: var(--light);
+  background: var(--bg-alt);
   border-radius: var(--radius);
   padding: 1.5rem;
   border-left: 4px solid var(--cyan);
 }
 .summary-card.pink-border { border-left-color: var(--pink); }
-.summary-card h3 { color: var(--dark); }
+.summary-card h3 { color: var(--text); }
 
 /* ---------- Institutions strip ---------- */
 .institutions {
@@ -245,8 +276,8 @@ p:last-child { margin-bottom: 0; }
   color: var(--cyan);
   min-width: 50px;
 }
-.pub-title { font-weight: 600; color: var(--dark); margin-bottom: .2rem; }
-.pub-meta  { font-size: .88rem; color: var(--mid); }
+.pub-title { font-weight: 600; color: var(--text); margin-bottom: .2rem; }
+.pub-meta  { font-size: .88rem; color: var(--text-muted); }
 
 /* ---------- Team page ---------- */
 .team-grid {
@@ -256,7 +287,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 2rem;
 }
 .team-card {
-  background: var(--white);
+  background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -281,10 +312,10 @@ p:last-child { margin-bottom: 0; }
 .team-photo-placeholder svg { width: 60px; height: 60px; opacity: .4; }
 
 .team-info { padding: 1.2rem; }
-.team-info h3 { margin-bottom: .2rem; font-size: 1.05rem; }
+.team-info h3 { margin-bottom: .2rem; font-size: 1.05rem; color: var(--text); }
 .team-role  { font-size: .88rem; color: var(--cyan); font-weight: 600; margin-bottom: .35rem; }
-.team-org   { font-size: .82rem; color: var(--mid); margin-bottom: .6rem; }
-.team-bio   { font-size: .88rem; color: var(--mid); margin-bottom: 0; line-height: 1.55; }
+.team-org   { font-size: .82rem; color: var(--text-muted); margin-bottom: .6rem; }
+.team-bio   { font-size: .88rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.55; }
 
 /* ---------- Documentation page ---------- */
 .doc-grid {
@@ -294,7 +325,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 2rem;
 }
 .doc-card {
-  background: var(--white);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -340,7 +371,7 @@ p:last-child { margin-bottom: 0; }
 .pie-item:nth-child(even) .pie-dot { background: var(--pink); box-shadow: 0 0 0 2px var(--pink); }
 
 .pie-card {
-  background: var(--white);
+  background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.5rem;
@@ -387,7 +418,8 @@ p:last-child { margin-bottom: 0; }
     flex-direction: column;
     position: absolute;
     top: 70px; left: 0; right: 0;
-    background: var(--dark);
+    background: var(--nav-bg);
+    border-top: 1px solid var(--border);
     padding: 1rem 1.5rem;
     gap: .25rem;
     box-shadow: 0 8px 16px rgba(0,0,0,.3);
