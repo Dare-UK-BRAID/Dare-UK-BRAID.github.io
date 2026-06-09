@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRAID – Brain Frailty Integrated through Data Federation</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/braid-logo-horizontal.png"
+             alt="BRAID – A DARE UK Project"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="nav-logo-fallback" style="display:none;"><span>BRAID</span>&nbsp;| DARE UK</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="pie-activities.html">PIE Activities</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="badge-row">
+          <span class="badge">DARE UK Research Exemplar</span>
+          <span class="badge--pink badge">April 2026 – 12 months</span>
+        </div>
+        <h1 id="hero-title">
+          <em>BRAID</em><br />
+          Brain Frailty Integrated<br />through Data Federation
+        </h1>
+        <p class="subtitle">
+          A multi-institutional project testing federated Trusted Research Environments
+          to advance privacy-preserving, data-driven brain health and frailty research across the UK.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+          <a href="research.html" class="btn btn-primary">Explore the Research</a>
+          <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
+             target="_blank" rel="noopener" class="btn btn-outline">DARE UK Project Page ↗</a>
+        </div>
+      </div>
+      <div class="hero-logo" aria-hidden="true">
+        <img src="assets/images/braid-logo-vertical-dark.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LAY SUMMARY ===== -->
+<section class="section lay-summary" aria-labelledby="summary-title">
+  <div class="container">
+    <h2 id="summary-title">Project Overview</h2>
+    <p style="max-width:760px;">
+      Our brains, like the rest of our bodies, can be affected by age and disease — impairing brain
+      health. Poor brain health may not lead to immediate clinical symptoms, but it predicts worse
+      outcomes across many diseases. Researchers use the term <strong>brain frailty</strong> to describe
+      cumulative brain damage that raises the risk of mortality, slower thinking, memory problems,
+      and conditions such as dementia or stroke.
+    </p>
+    <p style="max-width:760px;">
+      To study brain health effectively, researchers need access to large, diverse populations with
+      data including brain MRI scans, clinical records, genetic data, demographics and lifestyle
+      factors. Because this data is sensitive, researchers use <strong>Trusted Research Environments
+      (TREs)</strong> — secure digital spaces allowing approved experts to analyse data safely without
+      moving it.
+    </p>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>The Challenge</h3>
+        <p>
+          Federated analysis — running analyses across multiple TREs at once — increases research
+          power while maintaining privacy. However, the readiness of TRE infrastructure to support
+          complex neuroimaging workflows has not yet been fully realised.
+        </p>
+      </div>
+      <div class="summary-card pink-border">
+        <h3>Our Approach</h3>
+        <p>
+          BRAID will adapt existing brain-frailty analytics pipelines into TRE-ready workflows,
+          using advanced machine-learning on synthetic data to identify early biomarkers of brain
+          frailty and test how well federated TREs handle complex brain data.
+        </p>
+      </div>
+      <div class="summary-card">
+        <h3>Public Involvement</h3>
+        <p>
+          Alongside technical work, we run workshops and engagement activities to explore public
+          views on privacy, data use, and federated technologies — ensuring our methods reflect
+          public values and address societal concerns.
+        </p>
+      </div>
+      <div class="summary-card pink-border">
+        <h3>Expected Impact</h3>
+        <p>
+          Identifying where improvements are needed will make TREvolution technologies more
+          reliable, scalable, and user-friendly — paving the way for a national framework for
+          federated brain health research.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK PACKAGES ===== -->
+<section class="section section--alt" aria-labelledby="wp-title">
+  <div class="container">
+    <h2 id="wp-title">Work Packages</h2>
+    <p style="max-width:700px; margin-bottom:2rem;">
+      The project is structured into four interacting work packages, each testing different
+      aspects of the DARE-UK TREvolution infrastructure.
+    </p>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>WP1 · Data Generation</h3>
+        <p>Producing a complete data inventory, generating high-fidelity synthetic neuroimaging
+        and clinical datasets using differentially private methods, and specifying FAIR metadata
+        standards for federated analytics.</p>
+      </div>
+      <div class="summary-card pink-border">
+        <h3>WP2 · Analysis Workflows</h3>
+        <p>Building multi-modal MRI processing pipelines (T1, T2, susceptibility-weighted) using
+        FSL and UK Biobank pipelines to extract brain frailty biomarkers, including a brain age
+        regression model trained on 15,000 UK Biobank participants.</p>
+      </div>
+      <div class="summary-card">
+        <h3>WP3 · Federated Evaluation</h3>
+        <p>Assessing infrastructure readiness, compute capacity, workflow management, disclosure
+        control procedures, and privacy risks of model outputs across TREvolution nodes.</p>
+      </div>
+      <div class="summary-card pink-border">
+        <h3>WP4 · Dissemination &amp; PIE</h3>
+        <p>Documenting learnings, producing best-practice guidance for the DARE-UK community,
+        and conducting structured public involvement and engagement to shape responsible development
+        of federated technologies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTITUTIONS ===== -->
+<div class="institutions" aria-label="Partner institutions">
+  <div class="container">
+    <ul class="inst-list">
+      <li>University of Nottingham</li>
+      <li>Nottingham University Hospitals NHS Trust</li>
+      <li>Dementias Platform UK (DPUK)</li>
+      <li>SAIL Databank – Swansea University</li>
+      <li>University of the West of England</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p>© 2026 BRAID Project. Funded by <a href="https://dareuk.org.uk" target="_blank" rel="noopener">DARE UK</a> / UKRI.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="research.html">Research</a>
+        <a href="team.html">Team</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="pie-activities.html">PIE Activities</a>
+        <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
+           target="_blank" rel="noopener">DARE UK ↗</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
