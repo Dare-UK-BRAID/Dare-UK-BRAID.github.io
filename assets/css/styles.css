@@ -168,14 +168,25 @@ p:last-child { margin-bottom: 0; }
   max-width: 640px;
   margin-bottom: 2rem;
 }
+/* image is 672×755; brain icon fills top ~57% (~430px).
+   Render at 250px wide → 281px tall; icon = 160px → fills circle exactly.
+   Centre horizontally: (250-160)/2 = 45px overflow each side. */
 .hero-logo {
+  position: relative;
   overflow: hidden;
   height: 160px;
   width: 160px;
   flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0,0,0,.35);
 }
 .hero-logo img {
-  width: 160px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;     /* forces render wider than container — overflow:hidden clips */
+  max-width: none;  /* override global img { max-width:100% } */
   height: auto;
   mix-blend-mode: lighten;
 }
@@ -214,7 +225,7 @@ p:last-child { margin-bottom: 0; }
 }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.2); text-decoration: none; }
 .btn-primary { background: var(--cyan); color: var(--dark); }
-.btn-outline  { background: transparent; border: 2px solid rgba(255,255,255,.4); color: var(--white); }
+.btn-outline  { background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.55); color: #FFFFFF; }
 
 /* ---------- Lay Summary ---------- */
 .lay-summary {
