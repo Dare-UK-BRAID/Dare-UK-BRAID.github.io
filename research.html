@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research – BRAID</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -14,12 +14,8 @@
   <div class="container">
     <nav class="nav-inner" aria-label="Main navigation">
       <a class="nav-logo" href="index.html">
-        <picture>
-          <source media="(prefers-color-scheme: dark)"  srcset="assets/images/braid-logo-wide-onlight.png" />
-          <source media="(prefers-color-scheme: light)" srcset="assets/images/braid-logo-wide-ondark.png" />
-          <img src="assets/images/braid-logo-wide-ondark.png" alt="BRAID – A DARE UK Project"
-               onerror="this.closest('.nav-logo').querySelector('.nav-logo-fallback').style.display='flex'; this.closest('picture').style.display='none';" />
-        </picture>
+        <img src="assets/images/braid-logo-wide-onlight.png" alt="BRAID – A DARE UK Project"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <span class="nav-logo-fallback" style="display:none;"><span>BRAID</span>&nbsp;| DARE UK</span>
       </a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">

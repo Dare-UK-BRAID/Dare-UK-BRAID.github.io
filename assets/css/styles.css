@@ -20,11 +20,11 @@
   --card-bg:     #FFFFFF;
   --shadow:      0 2px 16px rgba(0,0,0,.08);
 
-  /* Nav (light mode = white bar) */
-  --nav-bg:      #FFFFFF;
-  --nav-border:  #E2E6EA;
-  --nav-link:    rgba(0,0,0,.65);
-  --nav-active:  var(--dark);
+  /* Nav — always dark so logo backgrounds blend */
+  --nav-bg:      #333344;
+  --nav-border:  transparent;
+  --nav-link:    rgba(255,255,255,.75);
+  --nav-active:  #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,12 +36,6 @@
     --border:      #2A2A42;
     --card-bg:     #1A1A2E;
     --shadow:      0 2px 16px rgba(0,0,0,.35);
-
-    /* Nav (dark mode = same dark as hero) */
-    --nav-bg:      #333344;
-    --nav-border:  transparent;
-    --nav-link:    rgba(255,255,255,.75);
-    --nav-active:  #FFFFFF;
   }
 }
 
@@ -165,15 +159,26 @@ p:last-child { margin-bottom: 0; }
   gap: 2rem;
   align-items: center;
 }
-.hero-text h1 { color: var(--white); margin-bottom: 1rem; }
+.hero-text h1 { color: #FFFFFF; margin-bottom: 1rem; }
+.hero-text h1 em { color: var(--cyan); }
 .hero-text h1 em { font-style: normal; color: var(--cyan); }
 .hero-text .subtitle {
   font-size: 1.15rem;
-  color: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.85);
   max-width: 640px;
   margin-bottom: 2rem;
 }
-.hero-logo img { height: 160px; }
+.hero-logo {
+  overflow: hidden;
+  height: 160px;
+  width: 160px;
+  flex-shrink: 0;
+}
+.hero-logo img {
+  width: 160px;
+  height: auto;
+  mix-blend-mode: lighten;
+}
 
 .badge-row {
   display: flex; flex-wrap: wrap; gap: .75rem;
