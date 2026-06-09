@@ -247,6 +247,27 @@ p:last-child { margin-bottom: 0; }
 .summary-card.pink-border { border-left-color: var(--pink); }
 .summary-card h3 { color: var(--text); }
 
+.summary-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 640px) {
+  .summary-grid-2col { grid-template-columns: 1fr; }
+}
+
+.card-icon {
+  width: 44px; height: 44px;
+  background: rgba(0, 207, 255, .12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+}
+.card-icon svg { width: 22px; height: 22px; stroke: var(--cyan); }
+.card-icon.pink { background: rgba(240, 123, 142, .12); }
+.card-icon.pink svg { stroke: var(--pink); }
+
 /* ---------- Institutions strip ---------- */
 .institutions {
   background: var(--dark);
