@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/braid-logo-stacked-ondark.png" />
 </head>
-<body>
+<body class="page-research">
 
 <header class="site-header">
   <div class="container">
@@ -24,9 +25,10 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="team.html">Team</a></li>
         <li><a href="documentation.html">Documentation</a></li>
         <li><a href="pie-activities.html">PIE Activities</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -45,7 +47,7 @@
     <h2>Project Summary</h2>
     <p>
       The <strong>Brain fRAilty Integrated through Data federation (BRAID)</strong> project evaluates
-      and enhances the DARE-UK TREvolution infrastructure to support federated neuroimaging and
+      and enhances the DARE-UK <a href="https://dareuk.org.uk/trevolution/" target="_blank" rel="noopener">TREvolution</a> infrastructure to support federated neuroimaging and
       multimodal analytics. Our aim is to advance the long-term vision of a scalable,
       privacy-preserving national framework for cross-TRE research on brain health and frailty.
     </p>
@@ -66,7 +68,7 @@
       <div class="summary-card">
         <h3>Infrastructure Readiness</h3>
         <p>Testing compute capacity, workflow management, access procedures, interoperability,
-        provenance tracking, and containerised pipelines within the TREvolution technology stack.</p>
+        provenance tracking, and containerised pipelines within the <a href="https://dareuk.org.uk/trevolution/" target="_blank" rel="noopener">TREvolution</a> technology stack.</p>
       </div>
       <div class="summary-card pink-border">
         <h3>Disclosure Control</h3>
@@ -74,8 +76,8 @@
         vectors, trained models — pose any risk of re-identification before leaving the TRE.</p>
       </div>
       <div class="summary-card">
-        <h3>Federated Machine Learning</h3>
-        <p>Adapting multi-modal MRI processing and brain age regression models into TES
+        <h3>Federated Analysis and Machine Learning</h3>
+        <p>Adapting multi-modal MRI processing and brain age regression models into 5Safes-TES
         (Task Execution Service) compatible workflows deployable across distributed TRE nodes.</p>
       </div>
     </div>
@@ -86,40 +88,79 @@
 <section class="section section--alt">
   <div class="container">
     <h2>Methodology</h2>
-    <p style="max-width:760px; margin-bottom:2rem;">
-      BRAID employs a staged, synthetic-data-driven approach using the DPUK TRE as the primary
+    <p style="margin-bottom:2rem;">
+      BRAID employs public and staged, synthetic-data-driven approach using the DPUK TRE as the primary
       federated node, with Nottingham University Hospitals as a secondary node. All research uses
-      synthetic data derived from real neuroimaging cohorts, ensuring privacy whilst enabling
+      either fully anonymised publicly available or synthetic data derived from real neuroimaging cohorts, ensuring privacy whilst enabling
       rigorous technical validation.
     </p>
 
-    <div class="summary-grid">
+    <div class="summary-grid-2col">
       <div class="summary-card">
-        <h3>Synthetic Data Generation</h3>
-        <p>High-fidelity synthetic datasets are generated from neuroimaging and clinical data
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <h3>Data Gathering and Generation</h3>
+        <p> Data used to develop the project will be obtained from <a href="https://adni.loni.usc.edu/" target="_blank" rel="noopener">ADNI</a> and from High-fidelity synthetic datasets are generated from neuroimaging and clinical data
         (QMIN-MC, OBHC, MEMENTO, Whitehall II, CamCAN) using differentially private vine
         copula methods developed through DPUK. Datasets are evaluated for utility, quality,
         and privacy protection.</p>
       </div>
       <div class="summary-card pink-border">
+        <div class="card-icon pink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+            <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+            <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
+            <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/>
+            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+            <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+            <path d="M19.938 10.5a4 4 0 0 1 .585.396"/>
+            <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+            <path d="M19.967 17.484A4 4 0 0 1 18 18"/>
+          </svg>
+        </div>
         <h3>Neuroimaging Pipelines</h3>
         <p>Multi-modal anatomical MRI processing (T1-weighted, T2-weighted, susceptibility-weighted)
         using FSL and UK Biobank pipelines. Outputs include brain age regression, cortical thickness,
         white matter hyperintensity segmentation, and subcortical volume analysis.</p>
       </div>
-      <div class="summary-card">
+      <div class="summary-card pink-border">
+        <div class="card-icon pink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </div>
         <h3>FAIR Data Principles</h3>
-        <p>All datasets are explicitly tagged and documented according to FAIR principles
-        using BIDS (Brain Imaging Data Structure) format. Metadata specifications ensure
+        <p>All datasets are explicitly tagged and documented according to FAIR principles. Metadata specifications ensure
         reproducibility of federated neuroimaging pipelines.</p>
       </div>
-      <div class="summary-card pink-border">
-        <h3>TREvolution Integration</h3>
-        <p>Workflows are deployed as GA4GH Task Execution Service (TES) requests — standardising
-        submission of analysis tasks to TREs for interoperability, auditability, and security
-        across the three-layer (Submission / Controller / Execution) TREvolution architecture.</p>
+      <div class="summary-card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <h3>Disclosure Control Assessment</h3>
+        <p>Systematic evaluation of analytical outputs — spatial maps, summary statistics,
+        numerical vectors, and trained models — using semi-automated tools (SACRO, SACRO-ML)
+        to assess re-identification risk and ensure safe egress before results leave the TRE.</p>
       </div>
     </div>
+
+    <p style="margin-top:1.75rem; font-size:.93rem; color:var(--text-muted);">
+      <strong>Note:</strong> Public Involvement &amp; Engagement (PIE) activities are embedded
+      throughout all stages of the project, ensuring public perspectives shape technical design,
+      governance decisions, and the responsible development of federated methods.
+      See the <a href="pie-activities.html">PIE Activities</a> page for details.
+    </p>
   </div>
 </section>
 
@@ -127,10 +168,10 @@
 <section class="section">
   <div class="container">
     <h2>DARE UK Project Page</h2>
-    <p style="max-width:680px;">
+    <p>
       BRAID is part of the DARE UK Research Exemplars programme. Visit the official DARE UK
       website to learn how BRAID contributes to the broader UK TRE ecosystem and the
-      TREvolution programme.
+      <a href="https://dareuk.org.uk/trevolution/" target="_blank" rel="noopener">TREvolution</a> programme.
     </p>
     <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
        target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1rem;">
@@ -148,66 +189,38 @@
       This list will be updated as the project progresses.
     </p>
 
+    <h3 class="pub-year-heading">2024</h3>
     <ul class="pub-list">
       <li>
-        <span class="pub-year">2024</span>
-        <div>
-          <div class="pub-title">Brain Age Estimation from Multi-Modal MRI Using UK Biobank Normative Data</div>
-          <div class="pub-meta">Sotiropoulos S, Chen X, Auer D, Figueredo G et al. — University of Nottingham</div>
-        </div>
+        <div class="pub-title">Brain Age Estimation from Multi-Modal MRI Using UK Biobank Normative Data</div>
+        <div class="pub-meta">Sotiropoulos S, Chen X, Auer D, Figueredo G et al. — University of Nottingham</div>
       </li>
       <li>
-        <span class="pub-year">2024</span>
-        <div>
-          <div class="pub-title">TRE-FX: Enabling Federated Analytics Across Trusted Research Environments</div>
-          <div class="pub-meta">Squires E, Hotchkiss L et al. — Dementias Platform UK / SeRP</div>
-        </div>
-      </li>
-      <li>
-        <span class="pub-year">2023</span>
-        <div>
-          <div class="pub-title">SACRO: Semi-Automated Checking of Research Outputs for Disclosure Risk</div>
-          <div class="pub-meta">Preen R et al. — University of the West of England</div>
-        </div>
-      </li>
-      <li>
-        <span class="pub-year">2023</span>
-        <div>
-          <div class="pub-title">ON-Harmony UK Biobank Neuroimaging Processing Pipeline</div>
-          <div class="pub-meta">Sotiropoulos S et al. —
-            <a href="https://github.com/SPMIC-UoN/ON-Harmony_UKBB_pipeline" target="_blank" rel="noopener">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <span class="pub-year">2022</span>
-        <div>
-          <div class="pub-title">Award-Winning MRI Reconstruction and Motion Correction Algorithms (MICCAI 2022)</div>
-          <div class="pub-meta">Chen X et al. — University of Nottingham</div>
-        </div>
-      </li>
-      <li>
-        <span class="pub-year">Ongoing</span>
-        <div>
-          <div class="pub-title">TICH-3: AI-Based Segmentation for Outcome Measures in Intracerebral Haemorrhage RCT</div>
-          <div class="pub-meta">Dineen R (Principal Investigator) — University of Nottingham</div>
-        </div>
-      </li>
-      <li>
-        <span class="pub-year">Ongoing</span>
-        <div>
-          <div class="pub-title">NIHR ASSIST-MS: Multisite Evaluation of AI-Based MS Lesion Detection</div>
-          <div class="pub-meta">Dineen R (Co-Investigator) — University of Nottingham / Multi-site</div>
-        </div>
+        <div class="pub-title">TRE-FX: Enabling Federated Analytics Across Trusted Research Environments</div>
+        <div class="pub-meta">Squires E, Hotchkiss L et al. — Dementias Platform UK / SeRP</div>
       </li>
     </ul>
 
-    <p style="margin-top:2rem; font-size:.9rem; color:var(--mid);">
+    <h3 class="pub-year-heading">2023</h3>
+    <ul class="pub-list">
+      <li>
+        <div class="pub-title"><a href="https://arxiv.org/abs/2212.02935" target="_blank" rel="noopener">SACRO: Semi-Automated Checking of Research Outputs for Disclosure Risk ↗</a></div>
+        <div class="pub-meta">Preen R et al. — University of the West of England</div>
+      </li>
+    </ul>
+
+    <h3 class="pub-year-heading">2022</h3>
+    <ul class="pub-list">
+      <li>
+        <div class="pub-title">Award-Winning MRI Reconstruction and Motion Correction Algorithms (MICCAI 2022)</div>
+        <div class="pub-meta">Chen X et al. — University of Nottingham</div>
+      </li>
+    </ul>
+
+    <p style="margin-top:2rem; font-size:.9rem; color:var(--text-muted);">
       <em>Publications directly arising from the BRAID project will be added here as they become available.
       All code and workflows will be openly shared via
-      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Dare-UK-BRAID" target="_blank" rel="noopener">GitHub</a>
       under an MIT licence.</em>
     </p>
   </div>
@@ -219,9 +232,10 @@
       <p>© 2026 BRAID Project. Funded by <a href="https://dareuk.org.uk" target="_blank" rel="noopener">DARE UK</a> / UKRI.</p>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="research.html">Research</a>
-        <a href="team.html">Team</a>
         <a href="documentation.html">Documentation</a>
         <a href="pie-activities.html">PIE Activities</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact Us</a>
         <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
            target="_blank" rel="noopener">DARE UK ↗</a>
       </nav>

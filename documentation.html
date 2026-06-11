@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/braid-logo-stacked-ondark.png" />
 </head>
 <body>
 
@@ -24,9 +25,10 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="team.html">Team</a></li>
         <li><a href="documentation.html">Documentation</a></li>
         <li><a href="pie-activities.html">PIE Activities</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -39,11 +41,44 @@
   </div>
 </section>
 
+<!-- ===== TECHNICAL ARCHITECTURE ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Technical Architecture</h2>
+    <p style="margin-bottom:1.75rem;">
+      BRAID deploys analytical workflows as containerised 5-Safes Task Execution Services (5Safes-TES) requests
+      within the three-layer <a href="https://dareuk.org.uk/trevolution/" target="_blank" rel="noopener">TREvolution</a> architecture (submission layer, execution layer, egress). Below is a sketch of our initial architecture, which is still under construction:
+    </p>
+
+    <figure style="margin:0 0 2.5rem;">
+      <img src="assets/images/architecture-sketch.png"
+           alt="Sketch of the BRAID architecture: 5-Safes TES feeds an Analytics hub which dispatches to Preprocessing and Standardisation, Structural Feature Extraction and Brain Age Estimation, and Microbleed Detection workflows, converging on Egress Requirements Analysis with Disclosure Flags."
+           style="width:100%; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);" />
+      <figcaption style="margin-top:.6rem; font-size:.85rem; color:var(--text-muted); text-align:center;">
+        Sketch of the BRAID architecture showing the 5-Safes TES submission layer, analytics workflows, and egress/disclosure control pipeline.
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
 <!-- ===== QUICK LINKS ===== -->
 <section class="section">
   <div class="container">
     <h2>Quick Links</h2>
+
+    <h3 class="doc-group-heading">BRAID</h3>
     <div class="doc-grid">
+
+      <a href="https://github.com/Dare-UK-BRAID" target="_blank" rel="noopener" class="doc-card" style="color:inherit;">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </div>
+        <h3>GitHub Repository</h3>
+        <p>Open-source code for BRAID pipelines, containerised workflows, and configuration scripts.</p>
+      </a>
 
       <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
          target="_blank" rel="noopener" class="doc-card" style="color:inherit;">
@@ -56,48 +91,10 @@
         <p>Official BRAID project page on the DARE UK website, including programme context and updates.</p>
       </a>
 
-      <a href="https://github.com" target="_blank" rel="noopener" class="doc-card" style="color:inherit;">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-        </div>
-        <h3>GitHub Repository</h3>
-        <p>Open-source code for BRAID pipelines, containerised workflows, and configuration scripts (link to be added on project start).</p>
-      </a>
+    </div>
 
-      <a href="https://dareuk.org.uk/driver-project-trevolution/" target="_blank" rel="noopener"
-         class="doc-card" style="color:inherit;">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-          </svg>
-        </div>
-        <h3>TREvolution Programme</h3>
-        <p>DARE UK TREvolution infrastructure documentation — the federated TRE technology stack underpinning BRAID.</p>
-      </a>
-
-      <a href="https://dareuk.org.uk/wp-content/uploads/2025/04/Public-Involvement-and-Engagement-PIE-Guidelines-for-DARE-UK-Projects-Updated.pdf"
-         target="_blank" rel="noopener" class="doc-card" style="color:inherit;">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-        </div>
-        <h3>DARE UK PIE Guidelines</h3>
-        <p>Public Involvement and Engagement guidelines for DARE UK projects, informing BRAID's PIE strategy.</p>
-      </a>
-
-      <a href="https://www.ga4gh.org/product/task-execution-service-tes/" target="_blank" rel="noopener"
-         class="doc-card" style="color:inherit;">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-          </svg>
-        </div>
-        <h3>GA4GH Task Execution Service</h3>
-        <p>GA4GH TES specification — the interoperability standard used by TREvolution for submitting analysis tasks to TREs.</p>
-      </a>
+    <h3 class="doc-group-heading">Brain Image Analysis</h3>
+    <div class="doc-grid">
 
       <a href="https://bids.neuroimaging.io/" target="_blank" rel="noopener"
          class="doc-card" style="color:inherit;">
@@ -121,7 +118,7 @@
         <p>The neuroimaging toolbox developed by Sotiropoulos and colleagues, underpinning BRAID's multi-modal MRI processing pipelines.</p>
       </a>
 
-      <a href="https://github.com/SPMIC-UoN/ON-Harmony_UKBB_pipeline" target="_blank" rel="noopener"
+      <a href="https://github.com/SPMIC-UoN/BRC_Pipeline" target="_blank" rel="noopener"
          class="doc-card" style="color:inherit;">
         <div class="doc-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -133,104 +130,47 @@
       </a>
 
     </div>
-  </div>
-</section>
 
-<!-- ===== TECHNICAL ARCHITECTURE ===== -->
-<section class="section section--alt">
-  <div class="container">
-    <h2>Technical Architecture</h2>
-    <p style="max-width:720px; margin-bottom:2rem;">
-      BRAID deploys analytical workflows as containerised Task Execution Service (TES) requests
-      within the three-layer TREvolution architecture:
-    </p>
-    <div class="summary-grid">
-      <div class="summary-card">
-        <h3>Submission Layer</h3>
-        <p>Manages the submission of analytics tasks from researchers to the federated infrastructure.
-        BRAID workflows are packaged as containers and submitted via the GA4GH TES API.</p>
-      </div>
-      <div class="summary-card pink-border">
-        <h3>Controller Layer</h3>
-        <p>Governs disclosure-control validation and workflow orchestration. Ensures outputs —
-        spatial maps, summary statistics, trained models — pass disclosure checks before egress.</p>
-      </div>
-      <div class="summary-card">
-        <h3>Execution Layer</h3>
-        <p>Handles secure execution of computational workloads within each TRE node (DPUK, NUH),
-        maintaining provenance, auditability, and regulatory compliance throughout.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DELIVERABLES ===== -->
-<section class="section">
-  <div class="container">
-    <h2>Project Deliverables</h2>
-    <p style="margin-bottom:2rem;">Documents and outputs will be published here as they are completed.</p>
+    <h3 class="doc-group-heading">Federated Analytics</h3>
     <div class="doc-grid">
-      <div class="doc-card">
+
+      <a href="https://docs.federated-analytics.ac.uk/" target="_blank" rel="noopener"
+         class="doc-card" style="color:inherit;">
         <div class="doc-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
           </svg>
         </div>
-        <h3>D1.1 – Data Inventory</h3>
-        <p>Complete inventory of imaging types, clinical tables and demographics required for brain frailty workflows within TREs.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP1</span>
-      </div>
-      <div class="doc-card">
+        <h3>Federated Research</h3>
+        <p>Standards, patterns, and software infrastructure for secure federated research across multiple trusted research environments.</p>
+      </a>
+
+      <a href="https://dareuk.org.uk/trevolution/" target="_blank" rel="noopener"
+         class="doc-card" style="color:inherit;">
         <div class="doc-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
           </svg>
         </div>
-        <h3>D1.2 – Synthetic Datasets</h3>
-        <p>High-fidelity synthetic neuroimaging and clinical datasets for training and validation of federated workflows.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP1</span>
-      </div>
-      <div class="doc-card">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-          </svg>
-        </div>
-        <h3>D1.3 – Metadata Specification</h3>
-        <p>Metadata parameters required for reproducible brain-frailty federated analyses, including provenance and harmonisation records.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP1</span>
-      </div>
-      <div class="doc-card">
+        <h3>TREvolution Programme</h3>
+        <p>DARE UK TREvolution infrastructure documentation — the federated TRE technology stack underpinning BRAID.</p>
+      </a>
+
+      <a href="https://docs.federated-analytics.ac.uk/five_safes_tes" target="_blank" rel="noopener"
+         class="doc-card" style="color:inherit;">
         <div class="doc-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
           </svg>
         </div>
-        <h3>TRE-Ready Workflow Containers</h3>
-        <p>Open-source containerised neuroimaging and ML pipelines deployable across TREvolution nodes. Will be published on GitHub under MIT licence.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP2</span>
-      </div>
-      <div class="doc-card">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-        </div>
-        <h3>Infrastructure Evaluation Report</h3>
-        <p>Empirical findings on TREvolution readiness, performance, disclosure control gaps, and improvement requirements.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP3</span>
-      </div>
-      <div class="doc-card">
-        <div class="doc-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3>Best-Practice Guidance</h3>
-        <p>Community documentation on federated workflow deployment, disclosure risk mitigation, and synthetic data use in TREs.</p>
-        <span style="font-size:.8rem; color:var(--mid);">Status: Planned · WP4</span>
-      </div>
+        <h3>5-Safes Task Execution Service</h3>
+        <p>5-Safes TES specification — the interoperability standard used by TREvolution for submitting analysis tasks to TREs.</p>
+      </a>
+
     </div>
+
   </div>
 </section>
 
@@ -265,9 +205,10 @@
       <p>© 2026 BRAID Project. Funded by <a href="https://dareuk.org.uk" target="_blank" rel="noopener">DARE UK</a> / UKRI.</p>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="research.html">Research</a>
-        <a href="team.html">Team</a>
         <a href="documentation.html">Documentation</a>
         <a href="pie-activities.html">PIE Activities</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact Us</a>
         <a href="https://dareuk.org.uk/how-we-work/ongoing-activities/dare-uk-research-exemplars/braid/"
            target="_blank" rel="noopener">DARE UK ↗</a>
       </nav>
