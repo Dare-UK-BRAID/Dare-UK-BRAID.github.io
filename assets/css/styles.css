@@ -6,6 +6,7 @@
 /* ---------- Tokens (light mode defaults) ---------- */
 :root {
   --cyan:        #00CFFF;
+  --cyan-text:   #007A9E;
   --pink:        #F07B8E;
   --white:       #FFFFFF;
   --dark:        #333344;   /* nav / hero / footer – always dark */
@@ -51,8 +52,10 @@ body {
   font-size: 1rem;
 }
 img { max-width: 100%; display: block; }
-a { color: var(--cyan); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--cyan-text); text-decoration: none; }
+a:hover,
+a:focus-visible { color: var(--cyan); text-decoration: underline; }
+a:focus-visible { outline: 3px solid rgba(0,207,255,.45); outline-offset: 3px; }
 
 /* ---------- Utility ---------- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
@@ -213,6 +216,7 @@ p:last-child { margin-bottom: 0; }
   cursor: pointer;
 }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.2); text-decoration: none; }
+.btn:focus-visible { outline: 3px solid rgba(0,207,255,.45); outline-offset: 3px; }
 .btn-primary { background: var(--cyan); color: var(--dark); }
 .btn-outline  { background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.55); color: #FFFFFF; }
 
