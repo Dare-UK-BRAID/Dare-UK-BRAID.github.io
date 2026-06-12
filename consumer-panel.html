@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumer Panel – BRAID</title>
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/braid-logo-stacked-ondark.png" />
+  <style>
+    .timeline-container {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .timeline-item {
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+      border-left: 3px solid var(--cyan);
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--cyan);
+      border: 3px solid var(--bg);
+    }
+    .timeline-item h3 {
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .timeline-label {
+      color: var(--cyan);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .recommendation-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border-top: 4px solid var(--cyan);
+    }
+    .recommendation-card h4 {
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+    .recommendation-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .highlight-box {
+      background: rgba(0, 207, 255, 0.05);
+      border-left: 4px solid var(--cyan);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+    }
+    .session-box {
+      background: rgba(240, 123, 142, 0.12);
+      border-left: 4px solid var(--pink);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      display: grid;
+      gap: 1rem;
+    }
+    .session-box-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .session-box-header img {
+      max-height: 40px;
+      width: auto;
+      display: block;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 0.35rem;
+      box-shadow: 0 8px 18px rgba(0,0,0,.08);
+    }
+    .session-box h3 {
+      color: var(--text);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .highlight-box h3 {
+      color: var(--text);
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body class="page-research">
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/braid-logo-wide-onlight.png" alt="BRAID – A DARE UK Project"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="nav-logo-fallback" style="display:none;"><span>BRAID</span>&nbsp;| DARE UK</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="pie-activities.html">PIE Activities</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>BRAID Consumer Panel</h1>
+    <p>Shaping public priorities for brain health research through meaningful engagement</p>
+  </div>
+</section>
+
+<!-- ===== OVERVIEW ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Consumer Panel Highlights Public Priorities for Brain Health Research</h2>
+    <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 2rem;">
+      The BRAID team recently held its first Consumer Panel engagement session, bringing together members of 
+      the public to discuss the future of brain health research, the concept of brain frailty, and the responsible 
+      use of artificial intelligence and federated data infrastructures.
+    </p>
+
+    <div class="session-box">
+      <div class="session-box-header">
+        <h3>About This Session</h3>
+        <img src="assets/images/institutions/sail.png" alt="SAIL Databank logo" />
+      </div>
+      <p>
+        This was the <strong>SAIL Databank Consumer Panel</strong>, held as part of BRAID's <strong>Public Involvement and Engagement (PIE)</strong> programme. 
+        It aimed to co-design research approaches with patients and members of the public and featured discussion of brain health biomarkers, trust in AI-driven 
+        analytics, and governance for privacy-preserving research infrastructures. The Consumer Panel provided 
+        valuable feedback that will help shape future engagement activities, research design, and communication strategies.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRAIN FRAILTY INTRODUCTION ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <h2>Introducing Brain Frailty</h2>
+    <p>
+      During the meeting, the BRAID team presented its vision for advancing large-scale brain health research 
+      through privacy-preserving federated analytics. The project seeks to address long-standing challenges in 
+      neuroimaging research, including fragmented data access, inconsistent data recording, and limited opportunities 
+      for large-scale analysis. By enabling secure analysis across multiple trusted research environments, BRAID aims 
+      to support new approaches to understanding brain health and identifying markers of brain frailty.
+    </p>
+    <p>
+      The presentation highlighted how <strong>imaging-based measures of brain health</strong>, combined with routine 
+      healthcare information, could help improve prediction of health outcomes and support more personalised approaches 
+      to care.
+    </p>
+  </div>
+</section>
+
+<!-- ===== WHAT WE HEARD ===== -->
+<section class="section">
+  <div class="container">
+    <h2>What We Heard from the Consumer Panel</h2>
+    
+    <div class="summary-grid" style="margin-bottom: 2rem;">
+      <div class="summary-card">
+        <h3>Public Awareness Gap</h3>
+        <p>A recurring theme was the limited public awareness of brain health and brain frailty compared to more familiar concepts like BMI. Participants showed enthusiasm for raising awareness of brain ageing and prevention.</p>
+      </div>
+      <div class="summary-card pink-border">
+        <h3>Clear Communication Essential</h3>
+        <p>Panel members emphasised the importance of using accessible language for complex concepts. Alternative terminology, practical examples, and relatable explanations would improve understanding and engagement.</p>
+      </div>
+      <div class="summary-card">
+        <h3>Prevention is Priority</h3>
+        <p>Strong interest in lifestyle factors affecting brain health — alcohol, smoking, exercise, stress, mental health, head injuries, and lifelong learning. Greater education on long-term impacts needed.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Key Discussion Areas</h3>
+    
+    <div class="highlight-box">
+      <h4 style="margin-top: 0;">Representation and Access</h4>
+      <p>
+        Participants questioned how findings from individuals undergoing clinical brain scans can be generalised to broader 
+        populations. They highlighted the need to consider underrepresented groups, including carers, neurodivergent individuals, 
+        and communities facing barriers to research participation.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h4 style="margin-top: 0;">Trust and Transparency</h4>
+      <p>
+        These emerged as key considerations. Participants expressed interest in understanding how data are used, how AI-driven 
+        analyses operate, and how privacy is protected when research is conducted across multiple organisations and data environments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECOMMENDATIONS ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <h2>Recommendations from the Consumer Panel</h2>
+    <p style="margin-bottom: 2.5rem;">
+      The Consumer Panel provided several practical recommendations for future public involvement activities:
+    </p>
+    
+    <div class="recommendations-grid">
+      <div class="recommendation-card">
+        <h4>Education & Awareness</h4>
+        <p>Develop accessible educational materials explaining brain frailty, brain age, and brain health using real-world examples.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Co-Design Activities</h4>
+        <p>Involve public contributors in the design of future workshops, questionnaires, and engagement activities.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Expand Beyond Traditional Audiences</h4>
+        <p>Work with community groups, schools, universities, charities, sports organisations, carers' networks, and older adult groups.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Active Inclusion</h4>
+        <p>Ensure recruitment strategies actively reach underrepresented communities and underrepresented groups.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Flexible Participation</h4>
+        <p>Consider offering both group and individual participation options to support inclusive involvement.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Emotional Support</h4>
+        <p>Establish clear support and signposting processes for participants who may find discussions about brain health emotionally challenging.</p>
+      </div>
+      <div class="recommendation-card">
+        <h4>Health Equity</h4>
+        <p>Continue exploring how sex, gender, and health inequalities may influence brain health research and outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PIE ROADMAP ===== -->
+<section class="section">
+  <div class="container">
+    <h2>BRAID Public Involvement & Engagement Roadmap</h2>
+    <p style="margin-bottom: 2rem;">
+      Based on the Consumer Panel feedback, BRAID has developed a structured 10-month engagement plan to expand 
+      public involvement and co-design research priorities.
+    </p>
+
+    <div class="timeline-container">
+      <!-- Phase 1 -->
+      <div class="timeline-item">
+        <div class="timeline-label">Months 1–2</div>
+        <h3>Building Understanding & Refining Communication</h3>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Objectives:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Improve public understanding of brain frailty, brain age, and brain health</li>
+            <li>Address concerns raised during the first Consumer Panel</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Activities:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Develop plain-language descriptions of key concepts</li>
+            <li>Create visual communication materials and FAQs</li>
+            <li>Test terminology with Consumer Panel members</li>
+            <li>Produce a "What We Heard" summary</li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color: var(--text);">Outputs:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Public-facing communications toolkit</li>
+            <li>Revised engagement materials</li>
+            <li>Consumer-informed glossary of terms</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-item">
+        <div class="timeline-label">Months 2–5</div>
+        <h3>Expanding Public Involvement & Diversity</h3>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Objectives:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Broaden participation beyond existing networks</li>
+            <li>Ensure diverse perspectives are represented</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Activities:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Recruit through community groups, charities, and organisations</li>
+            <li>Targeted outreach to underrepresented communities</li>
+            <li>Hold workshops exploring brain health understanding, biomarkers, and acceptability</li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color: var(--text);">Outputs:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Expanded stakeholder network</li>
+            <li>Diversity and inclusion recruitment plan</li>
+            <li>Interim engagement report</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="timeline-item">
+        <div class="timeline-label">Months 5–8</div>
+        <h3>Co-Designing Trust, Governance & Research Priorities</h3>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Objectives:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Incorporate public perspectives into technical and ethical discussions</li>
+            <li>Understand expectations around data use and AI</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Activities:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Workshops on trust and transparency in AI</li>
+            <li>Privacy-preserving federated research infrastructures</li>
+            <li>Data governance and public oversight</li>
+            <li>Co-design participant-facing information</li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color: var(--text);">Outputs:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Public recommendations for trustworthy AI</li>
+            <li>Co-designed information resources</li>
+            <li>Public values framework for BRAID</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="timeline-item">
+        <div class="timeline-label">Months 8–10</div>
+        <h3>Evaluation, Integration & Future Planning</h3>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Objectives:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Evaluate the impact of public involvement activities</li>
+            <li>Translate findings into recommendations for future programmes</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <strong style="color: var(--text);">Activities:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Assess participant experiences and understanding</li>
+            <li>Evaluate perceptions of trust and acceptability</li>
+            <li>Synthesize findings from all activities</li>
+            <li>Final Consumer Panel validation meeting</li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color: var(--text);">Outputs:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Final PIE Report</li>
+            <li>Public Priorities & Recommendations Framework</li>
+            <li>Lessons Learned document</li>
+            <li>Future engagement and sustainability plan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOOKING AHEAD ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <h2>Looking Ahead</h2>
+    <p>
+      The feedback received during this first Consumer Panel session will play an important role in shaping BRAID's 
+      future engagement activities and research programme. The discussion reinforced the importance of public partnership 
+      in developing trustworthy, inclusive, and impactful brain health research.
+    </p>
+    <p>
+      As BRAID progresses, the team will continue working with patients, public contributors, researchers, and healthcare 
+      professionals to ensure that advances in brain imaging, artificial intelligence, and federated data analysis are 
+      developed in ways that align with public values and deliver meaningful benefits for society.
+    </p>
+    <p>
+      <strong>We would like to thank all Consumer Panel members for their thoughtful contributions, constructive feedback, 
+      and enthusiasm for the project. Their insights will help guide the next phase of BRAID's public involvement and 
+      engagement activities.</strong>
+    </p>
+
+    <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <a href="pie-activities.html" class="btn btn-primary" style="display: inline-flex;">
+        View PIE Activities
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><strong>BRAID</strong> – Brain fRAilty Integrated through Data federation</p>
+      <p style="color: var(--text-muted); margin-bottom: 0;">A <a href="https://dareuk.org.uk/" target="_blank" rel="noopener">DARE UK</a> research exemplar</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="pie-activities.html">PIE Activities</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
